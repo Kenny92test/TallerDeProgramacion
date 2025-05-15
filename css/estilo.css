@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  /* Este elmento hace que los px que agreguemos en padding no sumen "para fuera" de los tamanios que establecimos. Es decir, se meantiene el ancho qeudefinimos como atributo. */
+}
+
+body {
+  margin: 0;
+}
+
+image {
+  display: block;
+  width: 100%;
+}
+
+.header-principal {
+  padding: 0px 20px;
+}
+
+.header-principal__tiulo {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 10px 0;
+  /* color: #xxxxxx; */
+}
+
+.nav-principal {
+  display: none;
+}
+
+.header-principal__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-menu {
+  font-size: 1.5em;
+  border: 1px solid black;
+  /* Si quieres poner cilor remmplazas el "black" por el tuyo #XXXXX */
+  padding: 8px;
+  /*Si quieres cambiar el ancho y alto de los bordes, puedes acerlo desde aqui: (alto)px (ancho)px*/
+  display: block;
+  cursor: pointer;
+  /* Cambia la forma de cursor cuando el mouse esta encima del icono (hover) */
+}
+
+.header-principal__btn {
+  border: 1px solid black;
+  padding: 8px 20px;
+  display: block;
+  text-decoration: none;
+  /* Quita el subrayado de la naturaleza de un link */
+  cursor: pointer;
+  /* Cambia la forma de cursor cuando el mouse esta encima del icono (hover) */
+}
+
+
+.container-slider {
+  margin: 50px;
+  overflow: hidden;
+  /* Importante, esta forma ocultamos las  imagenes que se salen del cuadro cuando los alineamod con flex*/
+  box-shadow: 0 0 0 10px #fff,
+    0 15px 50px;
+  position: relative;
+}
+
+@media (orientation: landscape) {
+  .container-slider {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    /* Importante, esta forma ocultamos las  imagenes que se salen del cuadro cuando los alineamod con flex*/
+    box-shadow: 0 0 0 10px #fff,
+      0 15px 50px;
+    position: relative;
+  }
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  /* Es  +100% por cada imagen. Si es 2 imagenes, seria 200%*/
+  height: 200px;
+  margin-left: -100%;
+}
+
+.slider__section {
+  width: 100%;
+}
+
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*Importante: Para que las imagenes no se estiren*/
+}
+
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba (255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  /* Convertir el bloque de cuadrado a un circulo*/
+  cursor: pointer;
+}
+
+.slider__btn:hover {
+  background: red;
+  /* Convertir la manito del curoso a color cuando este en modo hover */
+}
+
+.slider__btn--left {
+  left: 10px;
+  /* Pegarlo a pa izquierda y dejar 10px*/
+}
+
+.slider__btn--right {
+  right: 10px;
+  /*Pegarlo a la derecha y dejar 10px*/
+}

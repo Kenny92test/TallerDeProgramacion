@@ -5,18 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jhire - Tienda en Línea</title>
-  <link rel="stylesheet" type="" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       overflow-x: hidden;
-    }
-
-    header {
-      background-color: #007BFF;
-      padding: 10px;
-      color: white;
     }
 
     .productos {
@@ -74,13 +69,28 @@
 
 <body>
   <!-- lo del menu estoy viendo como se hace lo dejo como antes nomas -->
-  <header class="HeaderPrincipal">
-    <h1 class="HeaderPrincipal_tiulo">Jhire</h1>
-    <div class="HeaderPrincipal_container">
-      <p class="HeaderPrincipal_telefono">Llama al: 988 098 787</p>
-    </div>
-    <div class="HeaderPrincipal_container">
-
+  <header class="header-principal">
+    <div class="container container--flex">
+      <div class="header-principal__container">
+        <h1 class="header-principal__tiulo">Jhire</h1>
+        <i class="icon-menu fa-solid fa-bars" id="btn-menu"></i>
+        <nav class="nav-principal">
+          <!-- En el deshabilitamos temporalmente el nav desde el CSS, porque se piensa hacerlo desplegable en formato portrait y ahoramismo estorba -->
+          <ul class="menu">
+            <li class="menu__item"><a href="" class="menu__link">INICIO</a></li>
+            <li class="menu__item"><a href="" class="menu__link">PRODUCTOS</a></li>
+            <li class="menu__item"><a href="" class="menu__link">KITS Y COMBOS</a></li>
+            <li class="menu__item"><a href="" class="menu__link">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-principal__container">
+        <p class="header-principal__telefono"><i class="fa-solid fa-phone"></i> Llama al: 988 098 787</p>
+      </div>
+      <div class="header-principal__container">
+        <i class="fa-solid fa-user"></i>
+        <a href="" class="header-principal__btn">Mi carrito <i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
     </div>
     <!-- <nav> -->
     <!--     <a href="#catalogo" style="color: white;">Catálogo</a> | -->
@@ -91,12 +101,21 @@
 
   <!-- lo deje talcual pero creo que era mejor antes que se agrandar a medida se agrenda la 
      pagina web lo dejo para que vena la diferencia y digan cual es mejor -->
-  <section>
-    <img
-      src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg"
-      alt="Promoción" class="imagen-promocion">
+  <section class="container-slider">
+    <div class="slider" id="slider">
+      <div class="slider__section">
+        <img src="img/oferta1.jpg" alt="" class="slider__img">
+      </div>
+      <div class="slider__section">
+        <img src="img/oferta2.jpg" alt="" class="slider__img">
+      </div>
+      <div class="slider__section">
+        <img src="img/oferta3.png" alt="" class="slider__img">
+      </div>
+    </div>
+    <div class="slider__btn slider__btn--right" id="btn--right">&#62</div>
+    <div class="slider__btn slider__btn--left" id="btn--left">&#60</div>
   </section>
-
   <!-- ayuda no me acuerdo el lenguaje assi y al profe no legusta los comando alt+27 y +26 ; 
      y nose porque desaparece las felchas cuando coloco un catagolo mas aunque no es necesario mas pero por si acaso-->
   <section id="catalogos" style="margin: 20px 0;">
@@ -212,6 +231,7 @@
       document.querySelector('.catalogo').scrollBy({left: direccion * 160, behavior: 'smooth'});
     }
   </script>
+  <script src="slider.js"></script>
 </body>
 
 </html>
