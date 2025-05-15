@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- lo mismo pero un poco decorado, no me di cuenta pero ni idea de como hice
+     lo de agradar la imagen a medida que agrandes la pantalla creo que lo quitare-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhire - Tienda en Línea</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 10px;
+            color: white;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .productodelosproductos {
+            text-align: center;
+        }
+
+        .categorias {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .promo {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- ncesito mejorar la fuente de la letra alguan recomendacion? -->
+    <header>
+        <div style="display: flex; justify-content: space-between;">
+            <h1>Jhire</h1>
+            <nav>
+                <a href="#catalogo" style="color: rgb(255, 255, 255);">Catálogo</a> |
+                <a href="#cuenta" style="color: rgb(255, 2, 2);">Cuenta</a> |
+                <a href="#carrito" style="color: white;">Carrito</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- cambie de opinion mejor que solo sea una imagen de la marca o de la tienda de fondo y el nombre de la 
+     compania adelante o que cambia con el tiempo como una diapositiva de powetpoint -->
+    <section>
+        <img src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg" alt="Promoción" class="promo">
+    </section>
+
+    <!-- (quedo de la verga) esto es lo que le colocare el efecto de carrusel que decia antes creo que haci es mejor o por lo menos asi lo vi en saga-->
+    <section id="catalogos" style="margin: 20px 0;">
+        <h2>Catálogos Más Buscados</h2>
+        <div class="categorias">
+            <p>Huevastico 1</p>
+            <p>Huevastico 2</p>
+            <p>Huevastico 3</p>
+        </div>
+    </section>
+
+    <!-- solo serna ocho por el momento no quiero que se vea saturado de imagenes, me imagino en separarlo por ofertas tipo lo mas vendido y los mas vistos ya asi -->
+    <section id="productos" style="margin: 20px 0;">
+        <h2>Productos Más Comprados</h2>
+        <div class="productos">
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 1</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 2</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 3</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 4</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 5</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 6</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 7</p></div>
+            <div class="producto-item"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 8</p></div>
+    </section>
+
+    <!-- si alguien se acuerda de como poner el google maps que lo ponga porque ni me acuerdo -->
+    <footer style="margin-top: 20px; text-align: center;">
+        <h3>Datos de Contacto</h3>
+        <p>Servicio al Cliente | Información de Compra Segura en Línea</p>
+        <p>Redes Sociales: Facebook | Instagram | Twitter</p>
+        <p>&copy; 2025 Jhire. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<!-- acerca del parallax el ejemplo mas cercano a ese efecto es de esta pagina solo es el principio https://www.firewatchgame.com -->
