@@ -1,150 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhire - Tienda en Línea</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jhire - Tienda en Línea</title>
+  <link rel="stylesheet" type="" href="">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
 
-        header {
-            background-color: #007BFF;
-            padding: 10px;
-            color: white;
-        }
+    header {
+      background-color: #007BFF;
+      padding: 10px;
+      color: white;
+    }
 
-        .productos {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin: 20px 0;
-        }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
 
-        .producto-del-producto {
-            text-align: center;
-        }
+    .producto-del-producto {
+      text-align: center;
+    }
 
-        .catalogo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            overflow: hidden;
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-        }
+    .catalogo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
 
-        .pruducto-del-catalogo {
-            flex: 0 0 150px;
-            text-align: center;
-        }
+    .pruducto-del-catalogo {
+      flex: 0 0 150px;
+      text-align: center;
+    }
 
-        .pruducto-del-catalogo img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
+    .pruducto-del-catalogo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
 
-        .boton-carusel {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+    .boton-carusel {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
-        .boton.izquierdo {
-            left: 0;
-        }
+    .boton.izquierdo {
+      left: 0;
+    }
 
-        .boton.derecho {
-            right: 0;
-        }
-    </style>
+    .boton.derecho {
+      right: 0;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- lo del menu estoy viendo como se hace lo dejo como antes nomas -->
-    <header>
-        <div style="display: flex; justify-content: space-between;">
-            <h1>Jhire</h1>
-            <nav>
-                <a href="#catalogo" style="color: white;">Catálogo</a> |
-                <a href="#cuenta" style="color: white;">Cuenta</a> |
-                <a href="#carrito" style="color: white;">Carrito</a>
-            </nav>
-        </div>
-    </header>
+  <!-- lo del menu estoy viendo como se hace lo dejo como antes nomas -->
+  <header class="HeaderPrincipal">
+    <h1 class="HeaderPrincipal_tiulo">Jhire</h1>
+    <div class="HeaderPrincipal_container">
+      <p class="HeaderPrincipal_telefono">Llama al: 988 098 787</p>
+    </div>
+    <div class="HeaderPrincipal_container">
 
-    <!-- lo deje talcual pero creo que era mejor antes que se agrandar a medida se agrenda la 
+    </div>
+    <!-- <nav> -->
+    <!--     <a href="#catalogo" style="color: white;">Catálogo</a> | -->
+    <!--     <a href="#cuenta" style="color: white;">Cuenta</a> | -->
+    <!--     <a href="#carrito" style="color: white;">Carrito</a> -->
+    <!-- </nav> -->
+  </header>
+
+  <!-- lo deje talcual pero creo que era mejor antes que se agrandar a medida se agrenda la 
      pagina web lo dejo para que vena la diferencia y digan cual es mejor -->
-    <section>
-        <img src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg" alt="Promoción" class="imagen-promocion">
-    </section>
+  <section>
+    <img
+      src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg"
+      alt="Promoción" class="imagen-promocion">
+  </section>
 
-    <!-- ayuda no me acuerdo el lenguaje assi y al profe no legusta los comando alt+27 y +26 ; 
+  <!-- ayuda no me acuerdo el lenguaje assi y al profe no legusta los comando alt+27 y +26 ; 
      y nose porque desaparece las felchas cuando coloco un catagolo mas aunque no es necesario mas pero por si acaso-->
-    <section id="catalogos" style="margin: 20px 0;">
-        <h2>Catálogos</h2>
-        <div class="catalogo">
-            <button class="boton.izquierdo" onclick="moverCatalogo(-1)">←</button>
-            <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png" alt="Catálogo"><p>electronico con electricidad</p></div>
-            <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png" alt="Catálogo"><p>merequetenge</p></div>
-            <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png" alt="Catálogo"><p>esternocleidomastoideo</p></div>
-            <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png" alt="Catálogo"><p>Moviles de gama alta ultra plus</p></div>
-            <button class="boton.derecho" onclick="moverCatalogo(1)">→</button>
-        </div>
-    </section>
+  <section id="catalogos" style="margin: 20px 0;">
+    <h2>Catálogos</h2>
+    <div class="catalogo">
+      <button class="boton.izquierdo" onclick="moverCatalogo(-1)">←</button>
+      <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png"
+          alt="Catálogo">
+        <p>electronico con electricidad</p>
+      </div>
+      <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png"
+          alt="Catálogo">
+        <p>merequetenge</p>
+      </div>
+      <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png"
+          alt="Catálogo">
+        <p>esternocleidomastoideo</p>
+      </div>
+      <div class="pruducto-del-catalogo"><img src="https://www.imsoluciones.pe/images/servicios/web-catalogo_web.png"
+          alt="Catálogo">
+        <p>Moviles de gama alta ultra plus</p>
+      </div>
+      <button class="boton.derecho" onclick="moverCatalogo(1)">→</button>
+    </div>
+  </section>
 
-    <!-- estaba pensando en usar el carrusel para darle un poco de movimiento a la pagina pero siento que estoy usando 
+  <!-- estaba pensando en usar el carrusel para darle un poco de movimiento a la pagina pero siento que estoy usando 
      demasiado el carrusel algo para remplazarlo? pro el moento lo dejara asi -->
-     <section id="productos" style="margin: 20px 0;">
-        <h2>Productos mas Comprados</h2>
-        <div class="productos">
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 1</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 2</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 3</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 4</p></div>
-    </section>
-     <section id="productos" style="margin: 20px 0;">
-        <h2>Productos mas Vistos</h2>
-        <div class="productos">
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 5</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 6</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 7</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 8</p></div>
-    </section>
-     <section id="productos" style="margin: 20px 0;">
-        <h2>Productos con entrega rapida</h2>
-        <div class="productos">
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 1</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 2</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 3</p></div>
-            <div class="productodelproducto"><img src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740" width="200" height="150" alt="Producto"><p>Producto 4</p></div>
-    </section>
+  <section id="productos" style="margin: 20px 0;">
+    <h2>Productos mas Comprados</h2>
+    <div class="productos">
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 1</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 2</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 3</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 4</p>
+      </div>
+  </section>
+  <section id="productos" style="margin: 20px 0;">
+    <h2>Productos mas Vistos</h2>
+    <div class="productos">
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 5</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 6</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 7</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 8</p>
+      </div>
+  </section>
+  <section id="productos" style="margin: 20px 0;">
+    <h2>Productos con entrega rapida</h2>
+    <div class="productos">
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 1</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 2</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 3</p>
+      </div>
+      <div class="productodelproducto"><img
+          src="https://img.freepik.com/vector-gratis/diseno-etiqueta-caja-vacia-cerrada-aislada_1308-64585.jpg?semt=ais_hybrid&w=740"
+          width="200" height="150" alt="Producto">
+        <p>Producto 4</p>
+      </div>
+  </section>
 
-    <footer style="margin-top: 20px; text-align: center;">
-        <h3>Datos de Contacto</h3>
-        <p>Servicio al Cliente | Información de Compra Segura en Línea</p>
-        <p>Redes Sociales: Facebook | Instagram | Twitter</p>
-        <p>&copy; 2025 Jhire. Todos los derechos reservados.</p>
-    </footer>
+  <footer style="margin-top: 20px; text-align: center;">
+    <h3>Datos de Contacto</h3>
+    <p>Servicio al Cliente | Información de Compra Segura en Línea</p>
+    <p>Redes Sociales: Facebook | Instagram | Twitter</p>
+    <p>&copy; 2025 Jhire. Todos los derechos reservados.</p>
+  </footer>
 
-    <script>
-        let desplazamiento = 0;
-        function moverCatalogo(direccion) {
-            desplazamiento += direccion * 160;
-            document.querySelector('.catalogo').scrollBy({left: direccion * 160, behavior: 'smooth'});
-        }
-    </script>
+  <script>
+    let desplazamiento = 0;
+    function moverCatalogo(direccion) {
+      desplazamiento += direccion * 160;
+      document.querySelector('.catalogo').scrollBy({left: direccion * 160, behavior: 'smooth'});
+    }
+  </script>
 </body>
+
 </html>
 
 <!-- siento que me flipe con lode efecto parallax recien me lo pongo a pensar pero no hara que la pagina se demore
