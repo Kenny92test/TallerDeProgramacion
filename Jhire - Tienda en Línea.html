@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhire - Tienda en Línea</title>
+</head>
+
+<body>
+    <!-- esto aun no tiene redireccion a los catalos ni cuentas y menbos al carrito -->
+    <header>
+        <div style="display: flex; justify-content: space-between; padding: 10px;">
+            <h1>Jhire</h1>
+            <nav>
+                <a href="#catalogo">Catálogo</a> |
+                <a href="#cuenta">Cuenta</a> |
+                <a href="#carrito">Carrito</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- se supone que es el carrusel por asi decirlo de imagenes, de promos y asi , nose que imagenes poner :p -->
+    <section id="carrusel" style="text-align: center; margin: 20px 0;">
+        <button onclick="moverIzquierda()">←</button>
+        <img src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg" alt="Imagen promo" width="600">
+        <img src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg" alt="Imagen 2" width="600">
+        <img src="https://thumbs.dreamstime.com/b/concepto-para-un-cartel-publicitario-durante-las-promociones-una-tienda-de-bricolaje-publicidad-la-bandera-en-el-sector-diy-143733557.jpg" alt="Imagen 3" width="600">
+        <button onclick="moverDerecha()">→</button>
+    </section>
+
+<!-- me gustaria colocar parecido al carrusel de imagenes pero en este caso con los catalogos nose ustedes -->
+    <section id="catalogos" style="margin: 20px 0;">
+        <h2>Catálogos Más Buscados</h2>
+        <ul>
+            <li>Electronicos</li>
+            <li>Mobiles</li>
+            <li>huevastico</li>
+        </ul>
+    </section>
+<!-- necesita descripcion el producto o solo el nombre  -->
+    <section id="productos" style="margin: 20px 0;">
+        <h2>Productos Más Comprados</h2>
+        <ul>
+            <li>Producto 1</li>
+            <li>Producto 2</li>
+            <li>Producto 3</li>
+            <li>Producto 4</li>
+            <li>Producto 5</li>
+        </ul>
+    </section>
+
+    <footer style="margin-top: 20px; text-align: center;">
+        <h3>Datos de Contacto</h3>
+        <p>Servicio al Cliente | Información de Compra Segura en Línea</p>
+        <p>Redes Sociales: Facebook | Instagram | Twitter</p>
+        <p>&copy; 2025 Jhire. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<!-- estaba pensando es hacerlo con el efecto parallax  -->

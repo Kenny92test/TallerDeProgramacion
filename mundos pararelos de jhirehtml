@@ -1,0 +1,74 @@
+<!-- esto esta generado con chatgpt no tomar en cuenta es solo un prototipo de lo que pensaba hacer (no me salio) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhire - Tienda en Línea</title>
+    <style>
+        body, html {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .parallax {
+            background-image: url('https://via.placeholder.com/1920x1080');
+            height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div style="display: flex; justify-content: space-between; padding: 10px;">
+            <h1>Jhire</h1>
+            <nav>
+                <a href="#catalogo">Catálogo</a> |
+                <a href="#cuenta">Cuenta</a> |
+                <a href="#carrito">Carrito</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Parallax -->
+    <div class="parallax"></div>
+
+    <!-- Catálogos más buscados -->
+    <section id="catalogos" style="margin: 20px 0;">
+        <h2>Catálogos Más Buscados</h2>
+        <ul>
+            <li>Catálogo 1</li>
+            <li>Catálogo 2</li>
+            <li>Catálogo 3</li>
+        </ul>
+    </section>
+
+    <!-- Sección Parallax -->
+    <div class="parallax"></div>
+
+    <!-- Productos más comprados -->
+    <section id="productos" style="margin: 20px 0;">
+        <h2>Productos Más Comprados</h2>
+        <ul>
+            <li>Producto 1</li>
+            <li>Producto 2</li>
+            <li>Producto 3</li>
+            <li>Producto 4</li>
+            <li>Producto 5</li>
+        </ul>
+    </section>
+
+    <!-- Contacto y pie de página -->
+    <footer style="margin-top: 20px; text-align: center;">
+        <h3>Datos de Contacto</h3>
+        <p>Servicio al Cliente | Información de Compra Segura en Línea</p>
+        <p>Redes Sociales: Facebook | Instagram | Twitter</p>
+        <p>&copy; 2025 Jhire. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
