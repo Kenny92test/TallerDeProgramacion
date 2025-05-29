@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhire - Componentes Electrónicos y Arduino</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slider_infinito.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sobre_nosotros.css">
+    <link rel="stylesheet" href="css/alerta_confirmacion_carrito.css">
+    <link rel="stylesheet" href="css/vista_rapida.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ventana_plegable_carrito.css">
+    <link rel="stylesheet" href="css/secciones_tajetas.css">
+    <link rel="stylesheet" href="css/parallax.css">
+
+</head>
+
+<body>
+    <header class="header" id="main-header">
+        <div class="container header__container">
+            <div class="header__logo" id="header__logo">
+                <a href="#" class="header__logo-link">Jhire</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="#inicio" class="main-nav__link">Inicio</a></li>
+                    <li class="main-nav__item"><a href="#mas-vendidos" class="main-nav__link">Mas vendidos</a></li>
+                    <li class="main-nav__item"><a href="#mas-vistos" class="main-nav__link">Mas vistos</a></li>
+                    <li class="main-nav__item"><a href="#entrega-rapida" class="main-nav__link">Con entrega rapida</a>
+                </ul>
+            </nav>
+            <div class="header__user-actions">
+                <div class="header__icon-wrapper">
+                    <a href="#" class="header__icon-link" aria-label="Perfil de usuario"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="header__icon-wrapper header__icon-wrapper--cart">
+                    <a href="#" class="header__icon-link header__icon-link--cart" id="cart-icon"
+                        aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count-badge" id="cart-count-badge">0</span>
+                    </a>
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <h4 class="cart-dropdown__title">Mi Carrito</h4>
+                        <div class="cart-dropdown__items" id="cart-dropdown-items">
+                        </div>
+                        <div class="cart-dropdown__total">
+                            Total: <span class="cart-dropdown__total-amount" id="cart-total-amount">S/. 0.00</span>
+                        </div>
+                        <a href="#" class="cart-dropdown__view-cart-btn button button--primary">Ver mi Carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="parallax-main-section">
+
+        <section class="hero">
+            <h1>Bienvenidos a tienda Jhire</h1>
+        </section>
+
+        <div class="section right">
+            <div class="content">
+                <h1>Donde tus ideas de electronica se
+                    vuelven <strong>realidad</strong></h1>
+            </div>
+        </div>
+
+        <section class="hero--cards">
+            <p>
+                Desde nuestros inicios, apostamos por el empenio y pasion del estudiante y aposionados por la
+                electronico. El trato cercano con nuestros clientes refleja
+                nuestra preocupacion por ofrecer un buen servicio posible con el fin de dar las facilidades
+                a los peruanos a hacer sus proyectos posibles.
+            </p>
+        </section>
+
+
+    </section>
+    <div class="container-slider-main">
+        <h2 class="product-section__title container-slider-title" id="inicio">Productos en oferta</h2>
+        <section class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <img src="img/oferta1.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/oferta2.jpg" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/oferta3.png" alt="" class="slider__img">
+                </div>
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn--right">&#62</div>
+            <div class="slider__btn slider__btn--left" id="btn--left">&#60</div>
+        </section>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+
+            <section class="product-section product-section--featured" id="mas-vendidos">
+                <h2 class="product-section__title">Productos Más Vendidos</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-product-id="prod001">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/ArduinoNanoV3.jpg" alt="Arduino UNO R3"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Arduino UNO R3 Original</h3>
+                        <p class="product-card__price" data-price="12.50">S/. 12.50</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod002">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/Protoboard_400.webp" alt="Protoboard 400 Puntos"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Protoboard 400 Puntos</h3>
+                        <p class="product-card__price" data-price="2.00">S/. 2.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod003">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/Kit_resistencias_(200pzs).avif" alt="Kit de Resistencias"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Kit Resistencias (200 pzs)</h3>
+                        <p class="product-card__price" data-price="4.50">S/. 4.50</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod004">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/cables_jumpers.jpg" alt="Cables Jumper M-H"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Cables Jumper M-H (40 pzs)</h3>
+                        <p class="product-card__price" data-price="2.80">S/. 2.80</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod005">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/Kit_leds_bacicos.webp" alt="Kit LEDs Básicos"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Kit LEDs Básicos (100 pzs)</h3>
+                        <p class="product-card__price" data-price="3.50">S/. 3.50</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod006">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/sensor_temp_lm35.jpg" alt="Sensor de Temperatura LM35"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Sensor Temp. LM35</h3>
+                        <p class="product-card__price" data-price="1.90">S/. 1.90</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod007">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/display_lcd.webp" alt="Display LCD 16x2"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Display LCD 16x2</h3>
+                        <p class="product-card__price" data-price="7.00">S/. 7.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod008">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/micro_sevo_motor_SG90.webp" alt="Micro Servo Motor SG90"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Micro Servo Motor SG90</h3>
+                        <p class="product-card__price" data-price="3.20">S/. 3.20</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-section product-section--viewed" id="mas-vistos">
+                <h2 class="product-section__title">Productos Más Vistos</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-product-id="prod009">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/ESP32PlacaWiFi:BT.webp" alt="ESP32 Placa de Desarrollo"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">ESP32 Placa WiFi/BT</h3>
+                        <p class="product-card__price" data-price="8.99">S/. 8.99</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod010">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/SensorUltrasonidoHC-SR04.webp" alt="Sensor Ultrasonido HC-SR04"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Sensor Ultrasonido HC-SR04</h3>
+                        <p class="product-card__price" data-price="2.50">S/. 2.50</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod011">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/FuentedePoderProtoboard.webp" alt="Fuente de Poder Protoboard"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Fuente de Poder Protoboard</h3>
+                        <p class="product-card__price" data-price="4.00">S/. 4.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod012">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/MóduloRelay1Canal.webp" alt="Módulo Relay 1 Canal"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Módulo Relay 1 Canal</h3>
+                        <p class="product-card__price" data-price="1.75">S/. 1.75</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-section product-section--fast-delivery" id="entrega-rapida">
+                <h2 class="product-section__title">Productos con Entrega Rápida</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-product-id="prod013">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/ArduinoNanoV3.jpg" alt="Arduino Nano"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Arduino Nano V3</h3>
+                        <p class="product-card__price" data-price="8.00">S/. 8.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod014">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/MultímetroDigitalBásico.webp" alt="Multímetro Digital"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Multímetro Digital Básico</h3>
+                        <p class="product-card__price" data-price="15.00">S/. 15.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod015">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/KitSensoresBásicos(5 pzs).webp" alt="Kit de Sensores Básicos"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Kit Sensores Básicos (5 pzs)</h3>
+                        <p class="product-card__price" data-price="9.50">S/. 9.50</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                    <div class="product-card" data-product-id="prod016">
+                        <div class="product-card__image-wrapper">
+                            <img src="img/products_cards/CautíndeSoldar40W.avif" alt="Cautín de Soldar"
+                                class="product-card__image">
+                            <div class="product-card__overlay">
+                                <button
+                                    class="product-card__action-button product-card__action-button--add button button--primary"
+                                    data-action="add-to-cart">Añadir al Carrito</button>
+                                <a href="#"
+                                    class="product-card__action-button product-card__action-button--view button button--secondary">Ver
+                                    Carrito</a>
+                            </div>
+                        </div>
+                        <h3 class="product-card__name">Cautín de Soldar 40W</h3>
+                        <p class="product-card__price" data-price="10.00">S/. 10.00</p>
+                        <button class="product-card__quick-view button button--secondary" data-action="quick-view">Vista
+                            Rápida del Producto</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+
+    <section class="about-us-section" id="about-us-section">
+        <div class="container about-us-section__container">
+            <div class="about-us-section__content reveal fade-bottom">
+                <h2 class="about-us-section__title">¿Quiénes Somos?</h2>
+                <p class="about-us-section__text">En Jhire, somos apasionados por la electrónica y la innovación.
+                    Nuestro objetivo es ser tu aliado confiable en cada proyecto, ofreciéndote componentes de alta
+                    calidad, kits educativos y el soporte que necesitas para transformar tus ideas en realidad.</p>
+                <p class="about-us-section__text">Nacimos con la visión de democratizar el acceso a la tecnología,
+                    proporcionando productos accesibles y un servicio excepcional. Desde el entusiasta que da sus
+                    primeros pasos hasta el profesional experimentado, en Jhire encontrarás lo que buscas para
+                    construir, aprender y crear.</p>
+                <p class="about-us-section__text">¡Únete a la comunidad Jhire y lleva tus proyectos al siguiente nivel!
+                </p>
+            </div>
+            <div class="about-us-section__image-wrapper reveal fade-right">
+                <img src="img/about_us.jpg" alt="Equipo Jhire" class="about-us-section__image">
+            </div>
+        </div>
+    </section>
+
+    <section class="hero--goodbye">
+        <h1>Muchas gracias por visitarnos, regrese pronto!</h1>
+    </section>
+    <div class="quick-view-modal" id="quick-view-modal">
+        <div class="quick-view-modal__content">
+            <button class="quick-view-modal__close-btn" id="close-quick-view-modal"
+                aria-label="Cerrar vista rápida">&times;</button>
+            <div class="quick-view-modal__product-details">
+                <img src="" alt="Producto en detalle" class="quick-view-modal__image" id="quick-view-image">
+                <div class="quick-view-modal__info">
+                    <h3 class="quick-view-modal__name" id="quick-view-name"></h3>
+                    <p class="quick-view-modal__price" id="quick-view-price"></p>
+                    <p class="quick-view-modal__description" id="quick-view-description"></p>
+                    <ul class="quick-view-modal__features" id="quick-view-features">
+                    </ul>
+                    <div class="quick-view-modal__actions">
+                        <button class="quick-view-modal__add-to-cart button button--primary"
+                            id="quick-view-add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-to-cart-confirmation" id="add-to-cart-confirmation">
+        <i class="fas fa-check-circle"></i> Producto añadido al carrito
+    </div>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__section footer__section--about">
+                <h3 class="footer__title">Jhire</h3>
+                <p class="footer__text">Tu tienda online de confianza para componentes electrónicos, kits de Arduino y
+                    soluciones para tus proyectos de robótica y domótica.</p>
+            </div>
+            <div class="footer__section footer__section--links">
+                <h3 class="footer__title">Enlaces Rápidos</h3>
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a href="#about-us-section" class="footer__link">Sobre Nosotros</a>
+                    </li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">Preguntas Frecuentes</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">Política de Privacidad</a></li>
+                    <li class="footer__list-item"><a href="#" class="footer__link">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer__section footer__section--contact">
+                <h3 class="footer__title">Contacto</h3>
+                <p class="footer__text"><i class="fas fa-map-marker-alt"></i>106-107, Jr. Paruro 1353, Lima 15001</p>
+                <p class="footer__text"><i class="fas fa-phone"></i> +51 987 654 321</p>
+                <p class="footer__text"><i class="fas fa-envelope"></i> info@jhireelectrnics.com</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-container">
+                <p class="footer__copyright">&copy; 2023 Jhire. Todos los derechos reservados.</p>
+                <div class="footer__social-icons social-icons">
+                    <a href="#" class="social-icons__link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icons__link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icons__link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icons__link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/slider_infinito.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            const logo = document.getElementById('header__logo');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
+</body>
+
+</html>

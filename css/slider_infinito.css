@@ -1,0 +1,85 @@
+.container-slider {
+    margin: 50px;
+    overflow: hidden;
+    /* Importante, esta forma ocultamos las  imagenes que se salen del cuadro cuando los alineamod con flex*/
+    box-shadow: 0 0 0 10px #fff,
+        0 15px 50px;
+    position: relative;
+}
+
+.container-slider-title {
+    margin-top: 20px;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    /* es  +100% por cada imagen. si es 2 imagenes, seria 200%*/
+    height: 500px;
+    margin-left: -100%;
+}
+
+.slider__section {
+    width: 100%;
+}
+
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*Importante: Para que las imagenes no se estiren*/
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba (255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    /* Convertir el bloque de cuadrado a un circulo*/
+    cursor: pointer;
+}
+
+.slider__btn:hover {
+    background: red;
+    /* Convertir la manito del curoso a color cuando este en modo hover */
+}
+
+.slider__btn--left {
+    left: 10px;
+    /* Pegarlo a pa izquierda y dejar 10px*/
+}
+
+.slider__btn--right {
+    right: 10px;
+    /*Pegarlo a la derecha y dejar 10px*/
+}
+
+
+@media (max-width: 768px) {
+    .container-slider {
+        margin: 50px;
+        overflow: hidden;
+        /* importante, esta forma ocultamos las  imagenes que se salen del cuadro cuando los alineamod con flex*/
+        box-shadow: 0 0 0 10px #fff,
+            0 15px 50px;
+        position: relative;
+        /* width: 90%; */
+        /* max-width: 600px; */
+    }
+
+    .slider {
+        display: flex;
+        width: 300%;
+        /* es  +100% por cada imagen. si es 2 imagenes, seria 200%*/
+        height: 200px;
+        margin-left: -100%;
+    }
+}

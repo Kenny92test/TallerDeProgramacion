@@ -1,0 +1,40 @@
+/* Mensaje de confirmación de añadir al carrito */
+.add-to-cart-confirmation {
+    position: fixed;
+    top: 20%;
+    /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background-color: var(--color-secundario);
+    color: var(--textp-claro);
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 2001;
+    /* Mayor que el modal para que se vea por encima */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-to-cart-confirmation.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.add-to-cart-confirmation .fas {
+    font-size: 1.2em;
+}
+
+@media (max-width: 480px) {
+    .add-to-cart-confirmation {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}

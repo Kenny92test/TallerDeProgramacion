@@ -1,0 +1,191 @@
+.main-content {
+    padding: 60px 0;
+}
+
+.product-section {
+    margin-bottom: 60px;
+}
+
+.product-section:last-child {
+    margin-bottom: 0;
+}
+
+.product-section__title {
+    font-family: var(--font-titulos);
+    font-size: 2.2em;
+    color: var(--texto-oscuro);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.product-section__title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primario);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 4 columnas en desktop, se ajustan */
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--textp-claro);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--sombra);
+    overflow: hidden;
+    /* Asegura que la imagen redondeada no desborde */
+    text-align: center;
+    padding-bottom: 20px;
+    /* Espacio para el botón inferior */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    /* Para el overlay */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    /* Animación de elevación al hacer hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 250px;
+    /* Altura fija para las imágenes */
+    object-fit: cover;
+    /* Recorta la imagen para que cubra el espacio */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    /* Transición para el filtro y movimiento */
+}
+
+.product-card:hover .product-card__image {
+    filter: brightness(70%);
+    /* Oscurece la imagen al hacer hover */
+    transform: scale(1.03);
+    /* Ligerísimo zoom */
+}
+
+.product-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay gris semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-card__overlay {
+    opacity: 1;
+    /* Muestra el overlay al hacer hover */
+}
+
+.product-card__action-button {
+    font-size: 0.95em;
+    padding: 8px 15px;
+    opacity: 0;
+    /* Oculto por defecto */
+    transform: translateY(10px);
+    /* Animación de entrada */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .product-card__action-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card:hover .product-card__action-button--add {
+    transition-delay: 0.1s;
+    /* Retraso para que aparezcan en orden */
+}
+
+.product-card:hover .product-card__action-button--view {
+    transition-delay: 0.2s;
+    /* Retraso para que aparezcan en orden */
+}
+
+
+.product-card__name {
+    font-family: var(--font-titulos);
+    font-size: 1.2em;
+    color: var(--texto-oscuro);
+    margin-bottom: 5px;
+    padding: 0 10px;
+    min-height: 40px;
+    /* Para mantener la altura consistente si el nombre es corto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card__price {
+    font-family: var(--font-cuerpos);
+    font-size: 1.5em;
+    color: var(--color-primario);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 40px 0;
+    }
+
+    .product-section__title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* 2 columnas en móviles */
+    }
+
+    .product-card__image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna en los móviles más pequeños */
+    }
+
+    .product-card__image {
+        height: 180px;
+    }
+
+}

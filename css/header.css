@@ -1,0 +1,192 @@
+header.shrink {
+    padding: 10px 40px;
+}
+
+header.shrink .header__logo {
+    transform: scale(0.7);
+}
+
+.header {
+    background-color: var(--fondo-oscuro);
+    color: var(--textp-claro);
+    padding: 15px 0;
+    border-bottom: 4px solid var(--color-primario);
+    position: sticky;
+    /* Hace el header fijo */
+    top: 0;
+    /* Lo fija en la parte superior */
+    width: 100%;
+    z-index: 100;
+    /* Asegura que esté por encima de otros elementos */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    /* Para esconderlo con el modal */
+}
+
+/* Clase JS para ocultar el header cuando el modal está activo */
+.header.is-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en móviles */
+    gap: 20px;
+    /* Espacio entre los elementos del header */
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espacio para el logo (si se agrega imagen) */
+    transition: transform 0.3s ease;
+}
+
+.header__logo-link {
+    font-family: var(--font-titulos);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--textp-claro);
+    transition: color 0.3s ease;
+}
+
+.header__logo-link:hover {
+    color: var(--color-primario);
+}
+
+.main-nav__list {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav__link {
+    color: var(--textp-claro);
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav__link:hover {
+    color: var(--color-primario);
+}
+
+.main-nav__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* Subrayado un poco más grueso */
+    background-color: var(--amarillo);
+    /* Color de acento para el subrayado */
+    bottom: -5px;
+    /* Más abajo para no tocar las letras */
+    left: 0;
+    transition: width 0.3s ease-out;
+}
+
+.main-nav__link:hover::after {
+    width: 100%;
+}
+
+.header__user-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    /* Para el carrito desplegable y badge */
+}
+
+.header__icon-link {
+    color: var(--textp-claro);
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+
+.header__icon-link:hover {
+    color: var(--color-primario);
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -8px;
+    /* Ajusta la posición vertical */
+    right: -8px;
+    /* Ajusta la posición horizontal */
+    background-color: var(--rojo);
+    color: var(--textp-claro);
+    font-size: 0.75em;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    padding-top: 1px;
+    /* Ajuste fino para centrado de texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    /* Para la animación de brinco */
+    z-index: 10;
+    /* Asegura que esté sobre el icono */
+}
+
+@media (max-width: 768px) {
+
+    .header__container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header__logo {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        justify-content: center;
+        /* Centra el logo */
+        transition: transform 0.3s ease;
+    }
+
+    .main-nav__list {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .main-nav__link {
+        font-size: 1em;
+        padding: 5px 10px;
+        /* Un poco de padding horizontal para el clic */
+    }
+
+    .header__user-actions {
+        width: 100%;
+        justify-content: center;
+        /* Centra los iconos de usuario */
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .header__logo-link {
+        font-size: 2em;
+        transition: transform 0.3s ease;
+    }
+
+    .hero__title {
+        font-size: 2em;
+    }
+
+    .hero__subtitle {
+        font-size: 1em;
+    }
+}
